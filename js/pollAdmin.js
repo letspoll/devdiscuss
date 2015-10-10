@@ -12,7 +12,7 @@ app.controller('pollAdminCtrl', function($scope, $http, $timeout) {
           $scope.pollSum = data;
           
           $scope.stopView();
-          stop = $timeout($scope.getPollCount, 2000);
+          stop = $timeout($scope.getPollCount, 1000);
         });
     };
     
