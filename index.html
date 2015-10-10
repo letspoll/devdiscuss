@@ -15,7 +15,6 @@
 </head>
 <body>
 
-<div class="container">
 
 <!--
 <div class="page-header">
@@ -34,25 +33,21 @@
             </div>
             <div class="panel-body">
                 <ul class="list-group">
-                    <li class="list-group-item">
+                    <li class="list-group-item" ng-class="getSelectedClass('L')">
                         <a ng-click="doPoll('L')" href="#" class="btn btn-info btn-lg">
                             <span class="glyphicon glyphicon-thumbs-up"></span> Like
                         </a>
                     </li>
-                    <li class="list-group-item">
+                    <li class="list-group-item" ng-class="getSelectedClass('W')">
                         <a ng-click="doPoll('W')" href="#" class="btn btn-default btn-lg">
                             <span class="glyphicon glyphicon-sunglasses"></span> Watch
                         </a>
                     </li>               
-                    <li class="list-group-item">
+                    <li class="list-group-item" ng-class="getSelectedClass('U')">
                         <a ng-click="doPoll('U')" href="#" class="btn btn-danger btn-lg">
                             <span class="glyphicon glyphicon-thumbs-down"></span> Unlike
                         </a>                        
                     </li>
-                    
-                                        <li class="list-group-item">
-                                        {{currentPollNo}}
-                                        </li>
                 </ul>
             </div>
             <!--
@@ -103,11 +98,17 @@
     .list-group-item {
         text-align: center;
     }
+
+    .item-selected {
+        background-color: lightyellow;
+    }
+
+    .full-height {
+        height: 100%;
+    }
 </style>
 
 <!-- Poll - END -->
-
-</div>
 
 <script src="js/poll.js"></script>
 
