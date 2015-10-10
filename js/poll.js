@@ -14,5 +14,13 @@ app.controller('pollCtrl', function($scope, $http) {
           });
       }
     };
+
+    $scope.getSelectedClass = function(pollNo) {
+      if($scope.currentPollNo === pollNo) {
+        return "item-selected";
+      } else {
+        return "";
+      }
+    }
     
 });
