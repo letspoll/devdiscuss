@@ -7,7 +7,8 @@ app.controller('pollAdminCtrl', function($scope, $http, $timeout) {
     
     $scope.getPollCount = function() {
       
-      $http.get("http://localhost:3000/view/" + $scope.pollNo)
+      //$http.get("http://localhost:3000/view/" + $scope.pollNo)
+      $http.get("http://52.89.252.154/view/" + $scope.pollNo)
         .success(function(data, status, headers, config) {
           $scope.pollSum = data;
           
