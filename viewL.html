@@ -15,13 +15,18 @@
 <body>
 
 <div class="full" ng-app="pollAdminApp" ng-controller="pollAdminCtrl" ng-init="init('L')">
-    <div class="blank" style="height:{{100-pollSum}}%">
-        {{100-pollSum}}
+    <div class="vertical-center">
+        <h1 class="text-primary">{{pollPercent}}</h1>
     </div>
-    <div class="filled" style="height:{{pollSum}}%">
-        {{pollSum}}
+
+    <div class="blank" style="height:{{100-pollPercent}}%">
+    
+    </div>
+    <div class="bg-info" style="height:{{pollPercent}}%">
+        
     </div>
 </div>
+
 
 <style>
     body, html {
@@ -37,9 +42,34 @@
         background-color: white;
     }
 
-    .filled {
-        background-color: blue;
+    .vertical-center {
+        position: fixed;
+        top:inherit;
+
+      min-height: 100%; 
+      min-height: 100vh;
+
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex; 
+
+        -webkit-box-align : center;
+      -webkit-align-items : center;
+           -moz-box-align : center;
+           -ms-flex-align : center;
+              align-items : center;
+      
+      width: 100%;
+      
+             -webkit-box-pack : center;
+                -moz-box-pack : center;
+                -ms-flex-pack : center;
+      -webkit-justify-content : center;
+              justify-content : center;
     }
+
 
 </style>
 

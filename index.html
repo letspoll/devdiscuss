@@ -15,13 +15,6 @@
 </head>
 <body>
 
-
-<!--
-<div class="page-header">
-    <h1>Poll <small>Bootsrap Poll template</small></h1>
-</div>
--->
-
 <!-- Poll - START -->
 <div class="container" ng-app="pollApp" ng-controller="pollCtrl">
     <div class="col-md-4"></div>
@@ -43,20 +36,13 @@
                             <span class="glyphicon glyphicon-sunglasses"></span> Watch
                         </a>
                     </li>               
-                    <li class="list-group-item" ng-class="getSelectedClass('U')">
-                        <a ng-click="doPoll('U')" href="#" class="btn btn-danger btn-lg fixedwidth">
+                    <li class="list-group-item" ng-class="getSelectedClass('D')">
+                        <a ng-click="doPoll('D')" href="#" class="btn btn-danger btn-lg fixedwidth">
                             <span class="glyphicon glyphicon-thumbs-down"></span> Dislike
                         </a>                        
                     </li>
                 </ul>
             </div>
-            <!--
-            <div class="panel-footer text-center">
-                <button type="button" class="btn btn-primary btn-block btn-sm">
-                    Vote</button>
-                <a href="#" class="small">View Result</a>
-            </div>
-            -->
         </div>
     </div>
 </div>
@@ -109,8 +95,6 @@
     }
 
 </style>
-
-<!-- Poll - END -->
 
 <script src="js/poll.js"></script>
 
