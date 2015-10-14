@@ -34,18 +34,18 @@
             <div class="panel-body">
                 <ul class="list-group">
                     <li class="list-group-item" ng-class="getSelectedClass('L')">
-                        <a ng-click="doPoll('L')" href="#" class="btn btn-info btn-lg">
+                        <a ng-click="doPoll('L')" href="#" class="btn btn-info btn-lg fixedwidth">
                             <span class="glyphicon glyphicon-thumbs-up"></span> Like
                         </a>
                     </li>
                     <li class="list-group-item" ng-class="getSelectedClass('W')">
-                        <a ng-click="doPoll('W')" href="#" class="btn btn-default btn-lg">
+                        <a ng-click="doPoll('W')" href="#" class="btn btn-default btn-lg fixedwidth">
                             <span class="glyphicon glyphicon-sunglasses"></span> Watch
                         </a>
                     </li>               
                     <li class="list-group-item" ng-class="getSelectedClass('U')">
-                        <a ng-click="doPoll('U')" href="#" class="btn btn-danger btn-lg">
-                            <span class="glyphicon glyphicon-thumbs-down"></span> Unlike
+                        <a ng-click="doPoll('U')" href="#" class="btn btn-danger btn-lg fixedwidth">
+                            <span class="glyphicon glyphicon-thumbs-down"></span> Dislike
                         </a>                        
                     </li>
                 </ul>
@@ -102,6 +102,10 @@
 
     .item-selected {
         background-color: lightyellow;
+    }
+
+    .fixedwidth {
+        width: 130px;
     }
 
 </style>
