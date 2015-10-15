@@ -19,13 +19,16 @@ app.controller('pollAdminCtrl', function($scope, $http, $timeout) {
 
       $http.post("http://52.89.252.154/getPollReport")
         .success(function(data, status, headers, config) {
+          var percent = 0;
           for (var i in data) {
             var record = data[i];
             if(record._id === $scope.pollChar) {
-              $scope.pollPercent = record.count;    
+              percent = record.count;    
               break;
             }
-          }          
+          }
+
+          $scope.pollPercent = percent;     
                   
           $scope.stopView();
           stop = $timeout($scope.getPollCount, 1000);
