@@ -2,6 +2,7 @@ var app = angular.module('pollApp', []);
 app.controller('pollCtrl', function($scope, $http) {
     $scope.currentPollChar = '';
     $scope.result = '';
+    $scope.question = '';
     
     $scope.doPoll = function(pollChar) {
       if($scope.currentPollChar != pollChar) {
@@ -22,6 +23,22 @@ app.controller('pollCtrl', function($scope, $http) {
       } else {
         return "";
       }
-    }
+    };
+
+    $scope.doQuestion = function() {
+      if($scope.question != '') {
+        //서버API 호출
+        //$http.post("http://52.89.252.154/question/", {'question' : $scope.question})        
+        //$http.get("http://localhost/question/" + $scope.question)
+        $http.get("http://52.89.252.154/question/" + $scope.question)
+          .success(function(response) {
+            $scope.question = '';
+          });
+      }
+    };
+
+    $scope.clearQuestion = function() {
+      $scope.question = '';
+    };
     
 });
