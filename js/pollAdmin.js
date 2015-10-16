@@ -22,6 +22,7 @@ app.controller('pollAdminCtrl', function($scope, $http, $timeout) {
       //     stop = $timeout($scope.getPollCount, 1000);
       //   });
       
+      //$http.post("http://localhost/getPollReport")
       $http.post("http://52.89.252.154/getPollReport")
         .success(function(data, status, headers, config) {
           var percent = 0;
@@ -42,6 +43,7 @@ app.controller('pollAdminCtrl', function($scope, $http, $timeout) {
     };
     
     $scope.getPollCountAll = function() {
+      //$http.post("http://localhost/getPollReport")
       $http.post("http://52.89.252.154/getPollReport")
         .success(function(data, status, headers, config) {
           var denominator = 0;

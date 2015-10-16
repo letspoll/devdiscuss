@@ -2,14 +2,14 @@ var app = angular.module('pollApp', []);
 app.controller('pollCtrl', function($scope, $http) {
     $scope.currentPollChar = '';
     $scope.result = '';
-    $scope.question = '';
+//    $scope.question = '';
     
     $scope.doPoll = function(pollChar) {
       if($scope.currentPollChar != pollChar) {
         $scope.currentPollChar = pollChar;
 
         //서버API 호출
-        //$http.get("http://localhost/poll/" + pollChar)
+        //$http.get("http://localhost/poll/" + pollChar)        
         $http.get("http://52.89.252.154/poll/" + pollChar)
           .success(function(response) {
             $scope.result = response;
@@ -24,7 +24,7 @@ app.controller('pollCtrl', function($scope, $http) {
         return "";
       }
     };
-
+/*
     $scope.doQuestion = function() {
       if($scope.question != '') {
         //서버API 호출
@@ -40,5 +40,5 @@ app.controller('pollCtrl', function($scope, $http) {
     $scope.clearQuestion = function() {
       $scope.question = '';
     };
-    
+*/ 
 });
