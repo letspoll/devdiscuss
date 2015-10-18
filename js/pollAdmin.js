@@ -54,11 +54,11 @@ app.controller('pollAdminCtrl', function($scope, $http, $timeout) {
             var record = data[i];
             if(record._id === "L") {
               $scope.pollL = record.count;
+              denominator += record.count;
             } else if(record._id === "D") {
               $scope.pollD = record.count;
+              denominator += record.count;
             }
-
-            denominator += record.count;
           }
 
           $scope.pollPercentL = parseInt($scope.pollL / denominator * 100) ;
